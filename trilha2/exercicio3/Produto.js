@@ -1,0 +1,35 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+class Produto {
+    nome;
+    preco;
+    quantidade;
+    constructor(nome, preco, quantidade) {
+        this.nome = nome;
+        this.preco = preco;
+        this.quantidade = quantidade;
+    }
+    calcularValorTotalEmEstoque() {
+        return this.preco * this.quantidade;
+    }
+    getNome() {
+        return this.nome;
+    }
+    getPreco() {
+        return this.preco;
+    }
+    getQuantidade() {
+        return this.quantidade;
+    }
+}
+const produto1 = new Produto("PS5", 3500.00, 10);
+const produto2 = new Produto("Mouse Pad", 50.00, 50);
+console.log(`Produto: ${produto1.getNome()}`);
+console.log(`Preço Unitário: R$ ${produto1.getPreco().toFixed(2)}`);
+console.log(`Quantidade em Estoque: ${produto1.getQuantidade()}`);
+console.log(`Valor Total em Estoque: R$ ${produto1.calcularValorTotalEmEstoque().toFixed(2)}`);
+console.log(`Produto: ${produto2.getNome()}`);
+console.log(`Preço Unitário: R$ ${produto2.getPreco().toFixed(2)}`);
+console.log(`Quantidade em Estoque: ${produto2.getQuantidade()}`);
+console.log(`Valor Total em Estoque: R$ ${produto2.calcularValorTotalEmEstoque().toFixed(2)}`);
+//# sourceMappingURL=Produto.js.map
